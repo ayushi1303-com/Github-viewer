@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Github Generator</title>
+    <style>
+        body,html{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    flex-direction: column;
+    
+}
+.box{
+    background-color: white;
+    text-align: center;
+    padding: 5px solid black;
+    border-radius: 20px;
+    padding: 50px 100px;
+}
+p{
+    font-size: 200%;
+}
+input{
+    height: 50px;
+    width: 250px;
+    border-radius: 20px ;
+
+}
+button{
+    background-color:slateblue;
+    height: 50px;
+    width: 260px;
+    border: 2px solid black;
+    border-radius: 20px;
+    cursor: pointer;
+}
+button:hover{
+    transform:scale(1.05);
+    background-color: white;
+}
+        
+
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Github Profile Viewer</h2>
+        <input type="text" id="user"><br><br>
+        <button onclick="profile()">Check</button><br><br><hr>
+        <a href="" id="ans"></a>
+    </div>
+    <script>
+        let input=document.getElementById("user");
+        let ans = document.getElementById("ans");
+        function profile(){
+            ans.href="https://github.com/" + input.value;
+            document.getElementById("ans").innerHTML ="View Profile";
+        }
+    </script>
+    
+</body>
+</html>
